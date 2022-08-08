@@ -27,7 +27,7 @@ pipeline {
                sh '''#!/bin/bash
                echo "Creating .ssh"
                mkdir -p /var/lib/jenkins/.ssh
-               ssh-keyscan 10.1.1.201 >> /var/lib/jenkins/.ssh/known_hosts
+               ssh-keyscan 10.1.1.203 >> /var/lib/jenkins/.ssh/known_hosts
          
                rsync -avz --exclude  '.git' --delete -e "ssh -i $sshkey" ./ root@10.1.1.203:/app/
 
