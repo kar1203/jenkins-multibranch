@@ -12,9 +12,9 @@ const appVersion = "4.0";
 app.get('/', (req, res) => {
 
   var msg = `<html><head><title>Simple NodeJS App</title></head>
-  <body style="background-color:green;">
-  <h1>Hello World!</h1>
-  <h2><p style="color:green;">
+  <body style="background-color:grey;">
+  <h1><p style="color:maroon;">Hello World!</p></h1>
+  <h2><p style="color:orange;">
       Process ID: ${pid} <br> 
       Running on: ${hostname} <br>
       App Version: ${appVersion}
