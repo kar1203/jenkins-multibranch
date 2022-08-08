@@ -15,9 +15,9 @@ app.get('/', (req, res) => {
   <body style="background: linear-gradient(to top right, #33ccff 0%, #ff9966 100%)">
   <h1><p style="color:black;">Hello World!</p></h1>
   <h2><p style="color:maroon;">
-      ----------- <br>
+      ----------------------<br>
       INFORMATION <br>
-      ----------- <br>
+      ---------------------- <br>
       Process ID: ${pid} <br> 
       Running on: ${hostname} <br>
       App Version: ${appVersion}
