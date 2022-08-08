@@ -13,8 +13,8 @@ app.get('/', (req, res) => {
 
   var msg = `<html><head><title>Simple NodeJS App</title></head>
   <body style="background: linear-gradient(to top right, #99ffcc 0%, #ff99cc 100%);">
-  <h1><p style="color:maroon;">Hello World!</p></h1>
-  <h2><p style="color:orange;">
+  <h1><p style="color:black;">Hello World!</p></h1>
+  <h2><p style="color:maroon;">
       Process ID: ${pid} <br> 
       Running on: ${hostname} <br>
       App Version: ${appVersion}
