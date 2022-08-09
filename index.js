@@ -12,7 +12,7 @@ const appVersion = "4.0";
 app.get('/', (req, res) => {
 
   var msg = `<html><head><title>Simple NodeJS App</title></head>
-  <body style="background: linear-gradient(to top right, #33ccff 0%, #ff9966 100%)">
+  <body style="background: linear-gradient(to bottom, #ccffcc 0%, #ffffff 100%);">
   <h1><p style="color:black;">Hello World!</p></h1>
   <h2><p style="color:maroon;">
       ----------------------<br>
