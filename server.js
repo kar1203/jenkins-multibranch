@@ -1,14 +1,16 @@
-const express = require('express')
-const app = express()
-const port = 3000
+'use strict';
 
+const express = require('express');
+
+// Constants
+const PORT = 8080;
 var os = require('os')
-var hostname = os.hostname();
-
+var HOST = os.hostname();
 var pid = process.pid;
-
 const appVersion = "4.0";
 
+// App
+const app = express();
 app.get('/', (req, res) => {
 
   var msg = `<html><head><title>Simple NodeJS App</title></head>
@@ -19,14 +21,12 @@ app.get('/', (req, res) => {
       INFORMATION <br>
       ---------------------- <br>
       Process ID: ${pid} <br> 
-      Running on: ${hostname} <br>
+      Running on: ${HOST} <br>
       App Version: ${appVersion}
   </p></h2>
   </body></html>`
+  res.send(msg);
+});
 
-  res.send(msg)
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+app.listen(PORT, HOST);
+console.log(`Running on http://${HOST}:${PORT}`);

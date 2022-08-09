@@ -1,0 +1,33 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ns-devops
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeJS-app
+spec:
+  selector:
+    matchLabels:
+      app: nodeJS-app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: nodeJS-app
+    spec: 
+      imagePullSecrets:
+      - name: default-secret
+      containers:
+      - name: nodeJS-app
+        image: {{ swrURL }}/{{ orgName }}/{{ imageName }}:{{ buildVersion }}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 49160
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+
